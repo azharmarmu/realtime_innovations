@@ -42,9 +42,7 @@ class _DashboardPage extends StatelessWidget {
         child: BlocBuilder<EmployeeCubit, EmployeeState>(
           builder: (context, state) {
             if (state is EmployeeLoaded && state.employees.isNotEmpty) {
-              return EmployeeWidget(
-                employees: state.employees,
-              );
+              return EmployeeWidget(employees: state.employees);
             } else if (state is EmployeeLoading) {
               return Center(
                 child: CircularProgressIndicator.adaptive(),
