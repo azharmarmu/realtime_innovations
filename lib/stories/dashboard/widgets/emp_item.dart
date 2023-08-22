@@ -22,7 +22,7 @@ class EmployeeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dismissible(
-      key: Key('$index'),
+      key: Key('$emp'),
       background: Container(
         alignment: Alignment.center,
         color: AppColors.errorColor,

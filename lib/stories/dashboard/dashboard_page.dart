@@ -41,6 +41,7 @@ class _DashboardPage extends StatelessWidget {
         width: double.infinity,
         child: BlocBuilder<EmployeeCubit, EmployeeState>(
           builder: (context, state) {
+            print('BlocBuilder-EmployeeCubit: ${state}');
             if (state is EmployeeLoaded && state.employees.isNotEmpty) {
               return EmployeeWidget(employees: state.employees);
             } else if (state is EmployeeLoading) {
